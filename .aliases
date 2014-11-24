@@ -6,6 +6,9 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# programs
+alias slt='open -a "Sublime Text 2"'
+
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
@@ -14,6 +17,9 @@ alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+# `cat` with beautiful colors. requires Pygments installed.
+alias c="pygmentize -O style=monokai -f console256 -g"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -83,7 +89,7 @@ jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources
 unset jscbin
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+alias trimcopy="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
